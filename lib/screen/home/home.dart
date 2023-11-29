@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kalkulator_beta_01/screen/kalender/kalender.dart';
 import 'package:kalkulator_beta_01/screen/kalkulator/kalkulator.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -46,11 +47,11 @@ class HomeScreenState extends State<HomeScreen>
                           size: 40,
                         ),
                         Icon(
-                          Icons.apps,
+                          Icons.calendar_month,
                           size: 40,
                         ),
                         Icon(
-                          Icons.view_comfy_alt,
+                          Icons.cloud,
                           size: 40,
                         ),
                       ],
@@ -64,15 +65,7 @@ class HomeScreenState extends State<HomeScreen>
                     controller: tabController,
                     children: const [
                       Kalkulator(),
-                      Text(
-                        'Masih Tahap develop',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
+                      Kalender(),
                       Text(
                         'Masih Tahap develop',
                         style: TextStyle(
