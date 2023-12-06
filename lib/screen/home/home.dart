@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kalkulator_beta_01/screen/kalender/kalender.dart';
 import 'package:kalkulator_beta_01/screen/kalkulator/kalkulator.dart';
+import 'package:kalkulator_beta_01/screen/wheater/cuaca.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -66,15 +67,7 @@ class HomeScreenState extends State<HomeScreen>
                     children: const [
                       Kalkulator(),
                       Kalender(),
-                      Text(
-                        'Masih Tahap develop',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
+                      Cuaca(),
                     ],
                   ),
                 ),

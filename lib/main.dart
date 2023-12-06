@@ -1,15 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:kalkulator_beta_01/routes.dart';
 import 'package:kalkulator_beta_01/screen/home/home.dart';
 
-void main() {
-  runApp(const MyApp());
+final helloWorldProvider = Provider((_) => 'Hello world');
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await initializeDateFormatting('id_ID', null)
+      .then((_) => runApp(const ProviderScope(child: MyApp())));
 }
+// void main() {
+//   runApp(const MyApp());
+// }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
